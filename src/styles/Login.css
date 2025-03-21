@@ -1,0 +1,118 @@
+/* Fondo de toda la pagina */
+body {
+    background: linear-gradient(135deg, #ff8c00, #ffa500, #ffcc80);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+/* Contenedor del Login */
+  .login-container {    
+    background:white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+/*Efecto hover para el contenedor*/
+  .login-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  }
+
+/* Titulo principal */
+  .login-container h1 {
+    color: #ff6a00;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+/* Subtitulo */
+  .login-container h2 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo del formulario */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Contenedor de cada input */
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  /* Estilos para las etiquetas */
+  .input-container label {
+    font-weight: bold;
+    color: #ff6a00;
+    margin-bottom: 5px;
+  }
+  
+  /* Estilos para los inputs */
+  .input-container input {
+    padding: 12px;
+    border: 2px solid rgb(219, 216, 216);
+    border-radius: 5px;
+    outline: none;
+    width: 92%;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin: 10px 0;
+  }
+  
+  /* Cambia el color del borde cuando el input esta enfocado */
+  .input-container input:focus {
+    border-color: #cc5500;
+    box-shadow: 0px 0px 8px rgba(255, 106, 0, 0.5);
+  }
+
+  /* Estilos para el botón */
+  .login-button {
+    background-color: #ff6a00;
+    color: white;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  
+  .login-button:hover {
+    background-color: #cc5500;
+  }
+  
+  .login-button:active {
+    transform: scale(0.95);
+  }
+
+  /* Estilos para el enlace de ¿Olvidaste tu contraseña? */
+  .forgot-password {
+    color: #ff6a00;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+  }
+
+  .forgot-password:hover {
+    color: #cc5500;
+    text-decoration: underline;
+  }
