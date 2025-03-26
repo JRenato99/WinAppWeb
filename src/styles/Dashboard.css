@@ -3,6 +3,7 @@
   padding: 20px;
   background: linear-gradient(to right, #f7941d, #ffcc80);
   height: 100vh;
+  border-radius: 15px;
 }
 
 .dashboard title {
@@ -14,7 +15,7 @@
   width: 100%;
   overflow-x: auto;
   background-color: white;
-  padding: 10px;
+  padding: 10px 0px;
   border-radius: 5px;
 }
 
