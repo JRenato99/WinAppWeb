@@ -14,14 +14,6 @@ const Layout = ({ children }: { children: ReactNode }) => {
     return(
         <div className="Layout">
             {/* Barra superopr */}
-            <nav className="topbar">
-                <ul> 
-                    <li><a href="/home/overview">Overview</a></li>
-                    <li><a href="/home/devices">Devices</a></li>
-                    <li><a href="/home/faults">Faults</a></li>
-                    <li><a href="/home/admin">Admin</a></li>
-                </ul>
-            </nav>
             <div>
                 {showSidebar &&(
                 <aside>
