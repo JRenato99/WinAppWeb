@@ -1,0 +1,54 @@
+.dashboard {
+  flex: 1;
+  padding: 20px;
+  background: linear-gradient(to right, #f7941d, #ffcc80);
+  height: 100vh;
+}
+
+.dashboard title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #f7941d;
+  color: white;
+}
+
+a {
+  color: #002147;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  th,
+  td {
+    font-size: 12px;
+    padding: 5px;
+  }
+}

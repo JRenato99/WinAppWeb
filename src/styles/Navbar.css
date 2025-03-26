@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7941d;
+  padding: 10px;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.tabs span {
+  margin-right: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tabs span:hover {
+  text-decoration: underline;
+}
+
+.user-session {
+  font-weight: bold;
+}
+
+.logout {
+  cursor: pointer;
+  margin-left: 10px;
+  color: #002147;
+}
+
+.logout:hover {
+  text-decoration: underline;
+}
