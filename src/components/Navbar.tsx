@@ -14,13 +14,13 @@ export const Navbar: React.FC = () => {
       {/* Menú */}
       <ul className="navbar-menu">
         <li>
-          <Link to="/home/overview">Overview</Link>
+          <Link to="/home/overview">Resumen</Link>
         </li>
         <li>
-          <Link to="/home/devices">Devices</Link>
+          <Link to="/home/devices">Dispositivos</Link>
         </li>
         <li>
-          <Link to="/home/faults">Faults</Link>
+          <Link to="/home/faults">Fallos</Link>
         </li>
 
         {/* Admin */}
@@ -28,22 +28,22 @@ export const Navbar: React.FC = () => {
           <span>Admin ▼</span>
           <ul className="dropdown-menu">
             <li>
-              <Link to="/home/admin/presets">Presets</Link>
+              <Link to="/home/admin/presets">Preajustes</Link>
             </li>
             <li>
-              <Link to="/home/admin/provisions">Provisions</Link>
+              <Link to="/home/admin/provisions">Disposiciones</Link>
             </li>
             <li>
-              <Link to="/home/admin/files">Files</Link>
+              <Link to="/home/admin/files">Archivos</Link>
             </li>
             <li>
-              <Link to="/home/admin/config">Config</Link>
+              <Link to="/home/admin/config">Configuracion</Link>
             </li>
             <li>
-              <Link to="/home/admin/permissions">Permissions</Link>
+              <Link to="/home/admin/permissions">Permisos</Link>
             </li>
             <li>
-              <Link to="/home/admin/users">Users</Link>
+              <Link to="/home/admin/users">Usuarios</Link>
             </li>
           </ul>
         </li>
