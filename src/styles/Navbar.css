@@ -1,9 +1,10 @@
+/* Estilos generales del navbar */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 0px;
-  background-color: white;
+  background-color: white; /* Color principal */
   position: relative;
   width: 100%;
   height: 80px;
@@ -11,37 +12,65 @@
   z-index: 1000;
 }
 
-.navbar-logo img {
-  align-content: center;
-  height: 100px;
-  max-height: 500px;
+.navbar-container {
   display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Logo */
+.navbar-logo img {
+  max-width: 120px; /*Ajuste automatico del logo*/
+  height: auto;
   padding: 20px;
 }
 
+/* Botón de menú para pantallas pequeñas */
+/* .menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: orange;
+} */
+
+/* Menú */
 .navbar-menu {
   list-style: none;
   display: flex;
-  gap: 50px;
+  gap: 20px;
+  text-align: center;
 }
 
-.navbar-menu li {
+.navbar-menu li,
+.logout li {
   position: relative;
-  font-size: 20pt;
+  font-size: larger;
+}
+.navbar-menu a,
+span {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.navbar-menu a:hover,
+span:hover {
+  color: white;
+  text-decoration: none;
 }
 
 .navbar-menu li:hover {
   background-color: #ff8c00;
   border-radius: 4px;
-}
-
-.navbar-menu a:hover,
-.dropdown:hover span {
   color: white;
-  text-decoration: none;
 }
 
-.navbar-logout {
+.navbar-menu:hover .dropdown {
+  display: block;
+}
+
+.logout {
   list-style: none;
   display: flex;
   gap: 20px;
@@ -49,73 +78,79 @@
   font-size: 20pt;
 }
 
-.dropdown-menu {
+.dropdown {
+  display: none;
   position: absolute;
+  background: #ff8c00;
   top: 100%;
   left: 0;
-  background: white;
   list-style: none;
-  box-shadow: 0px, 4px, 10px, rgba(0, 0, 0, 0.1);
+  box-shadow: 0px, 4px, 6px, rgba(0, 0, 0, 0.2);
+  padding: 5px 0;
+  border-radius: 5px;
+}
+
+.dropdown li {
   padding: 10px;
-  min-width: 100px;
-  opacity: 0; /* Oculto por defecto */
-  transform: translateY(-10px); /* Lo movemos un poco hacia arriba */
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  pointer-events: none; /* Evita que interfiera cuando está oculto */
 }
 
-.dropdown:hover .dropdown-menu {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.dropdown-menu li {
-  padding: 8px, 12px;
-}
-
-.dropdown-menu a {
-  color: #333;
-  display: block;
-  width: 100%;
-}
-
-.dropdown-menu a:hover {
-  background: #ff8c00;
+.dropdown li a {
   color: white;
-  border-radius: 4px;
+}
+
+.dropdown li:hover {
+  background: #ffb000;
+}
+
+/* Boton para moviles */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #ff8c00;
+  cursor: pointer;
 }
 
 /* Cerrar Sesión */
-.navbar-logout a {
+.logout a {
   text-decoration: none;
-  color: #ff8c00;
   font-weight: bold;
   transition: color 0.3s;
+  text-align: center;
 }
 
-.navbar-logout a:hover {
-  background-color: #ff8c00;
+.logout a:hover {
   color: white;
   border-radius: 5px;
   text-decoration: none;
 }
 
+.logout:hover {
+  background-color: none;
+  border-radius: 4px;
+  color: white;
+}
+
 /* Responsividad */
-@media (max-width: 760px) {
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
+@media (max-width: 700px) {
+  .navbar-toggle {
+    display: block;
   }
 
   .navbar-menu {
+    display: none;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    border-radius: 5px;
   }
 
-  .navbar-logout {
-    margin-top: 10px;
+  .navbar-menu.open {
+    display: flex;
   }
 }
